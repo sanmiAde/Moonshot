@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(missions) { mission in
-                NavigationLink(destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                NavigationLink(destination: MissionView(mission: mission, astronuats: self.astronuats)) {
                     Image(mission.image)
                         .resizable()
                         .scaledToFit()
